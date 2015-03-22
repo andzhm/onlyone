@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'stat_pages#home'
 
   resources :albums
+  get 'albums/:id/delete' => 'albums#delete', :as => :categories_delete
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
