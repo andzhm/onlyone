@@ -1,0 +1,21 @@
+<h1>Albums#index</h1>
+<p>Список всех альбомов здесь!</p>
+
+
+
+<div>
+<% @albums.each do |album| %>
+<tr>
+  <td><%= album.name %></td>
+  <td><%= album.description %></td>
+</tr>
+
+
+<% if album.image_stored? %>
+    <%= image_tag album.image.url, height: 200 %>
+<% else %>
+    <%= image_tag 'no_image.png', height: 200 %>
+<% end %>
+
+<% end %>
+</div>
