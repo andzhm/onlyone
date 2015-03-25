@@ -4,4 +4,7 @@ class StatPagesController < ApplicationController
 
 	end
 	
+	def signup
+		redirect_to '/404'
+	end
 end

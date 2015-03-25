@@ -5,17 +5,16 @@
 
 <div>
 <% @albums.each do |album| %>
-<tr>
-  <td><%= album.name %></td>
-  <td><%= album.description %></td>
-</tr>
 
+  <p><%= album.name %></p>
+  <p><%= album.description %></p>
 
-<% if album.image_stored? %>
+<p><% if album.image_stored? %>
     <%= image_tag album.image.url, height: 200 %>
 <% else %>
     <%= image_tag 'no_image.png', height: 200 %>
-<% end %>
+<% end %></p>
+<p><%= link_to 'Show', album %></p>
 
 <% end %>
 </div>

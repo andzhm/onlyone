@@ -1,2 +1,24 @@
 <h1>Albums#show</h1>
 <p>Find me in app/views/albums/show.html.erb</p>
+
+<% @photos.in_groups_of(3).each do |photos| %>
+	<% photos.select! {|x| !x.nil?} %>
+	<div>
+		<% photos.each do |photo| %>
+		<div>
+			<p><%= photo.photo_name %></p>
+			<p><%= photo.photo_description %></p>
+			
+<p><% if photo.photoimage_stored? %>
+    <%= image_tag photo.photoimage.url, height: 200 %>
+<% else %>
+    <%= image_tag 'no_image.png', height: 200 %>
+<% end %></p>
+
+		</div>
+<% end %>
+
+	</div>
+
+<% end %>
+

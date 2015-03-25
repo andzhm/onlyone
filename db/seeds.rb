@@ -9,3 +9,7 @@
 
 first = Album.create(name: 'first', description: 'lalalalla')
 second = Album.create(name: 'second', description: 'lalalalla')
+
+first_photo = Photo.create(name: 'firstphoto', description: 'lalalalla', album_id: first.id)
+second_photo = Photo.create(name: 'firstphoto', description: 'lalalalla', album_id: first.id)
+third = Photo.create(name: 'thirdphoto', description: 'lalalalla', album_id: second.id)

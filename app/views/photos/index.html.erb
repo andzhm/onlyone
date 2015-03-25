@@ -1,0 +1,20 @@
+<h1>Photos#index</h1>
+<p>Find me in app/views/photos/index.html.erb</p>
+
+dsf
+<div>
+<% @photos.each do |photo| %>
+<tr>
+  <td><%= photo.photo_name %></td>
+  <td><%= photo.photo_description %></td>
+</tr>
+
+
+<% if photo.photoimage_stored? %>
+    <%= image_tag photo.photoimage.url, height: 200 %>
+<% else %>
+    <%= image_tag 'no_image.png', height: 200 %>
+<% end %>
+
+<% end %>
+</div>
