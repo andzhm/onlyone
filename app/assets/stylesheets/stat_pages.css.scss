@@ -56,7 +56,7 @@
 	h2.major
 	{
 		position: relative;
-		border-top: solid 5px #e7eae8;
+		border-top: solid 5px #3f2e24;
 	}
 
 		h2.major span
@@ -246,7 +246,7 @@
 			input[type="reset"]:hover,
 			.button:hover
 			{
-				background: #EDD7AA;
+				background: #C1CAC5;
 			}
 
 			input[type="button"]:active,
@@ -407,11 +407,13 @@
 				ul.special li:hover
 				{
 					top: -10px;
+					text-indent: - 9999px;
 				}
 
 					ul.special li:hover a
 					{
-						background: #b9d2ce;
+						/*background: #b9d2ce;*/
+
 					}
 
 				ul.special a
@@ -419,8 +421,8 @@
 					display: block;
 					position: relative;
 					background: #c1cac5;
-					width: 12em;
-					height: 12em;
+					width: 11em;
+					height: 11em;
 					border-radius: 6em;
 					outline: 0;
 					-moz-transition: background-color .2s ease-in-out;
@@ -435,7 +437,7 @@
 						position: absolute;
 						width: 128px;
 						height: 128px;
-						font-size: 96px;
+						font-size: 85px;
 						line-height: 128px;
 						left: 50%;
 						top: 50%;
@@ -505,6 +507,47 @@
 				{
 					padding-left: 0.25em;
 				}
+
+
+	#usl_organization:hover {
+		background-image: url(/images/pic06.jpg);
+	}
+	#usl_ceremony:hover {
+		background-image: url(/images/pic06.jpg);
+	}
+	#usl_photo:hover {
+		background-image: url(/images/pic06.jpg);
+	}
+	#usl_video:hover {
+		background-image: url(/images/pic06.jpg);
+	}
+	#usl_lead:hover {
+		background-image: url(/images/pic06.jpg);
+	}
+	#usl_music:hover {
+		background-image: url(/images/pic06.jpg);
+	}
+	#usl_flower:hover {
+		background-image: url(/images/pic06.jpg);
+	}
+	#usl_show:hover {
+		background-image: url(/images/pic06.jpg);
+	}
+	#usl_coordination:hover {
+		background-image: url(/images/pic06.jpg);
+	}
+	#usl_hall:hover {
+		background-image: url(/images/pic06.jpg);
+	}
+	#usl_bar:hover {
+		background-image: url(/images/pic06.jpg);
+	}
+	#usl_polygraphy:hover {
+		background-image: url(/images/pic06.jpg);
+	}
+	#usl_auto:hover {
+		background-image: url(/images/pic06.jpg);
+	}
 
 	/* Forms */
 
@@ -698,6 +741,7 @@
 			display: none;
 		}
 
+	
 /*********************************************************************************/
 /* Sidebar + Content                                                             */
 /*********************************************************************************/
@@ -728,7 +772,7 @@
 	{
 		background: #fff;
 		border-top: solid 5px #3f2e24;
-		border-bottom: solid 5px #c1cac5;
+		border-bottom: solid 5px #3f2e24;
 	}
 	
 /*********************************************************************************/
@@ -754,7 +798,7 @@
 	#banner
 	{
 		position: relative;
-		background-color:		rgba(21,28,23,0.85);
+		background-color:		rgba(21,28,23,0.70);
 		background-image:		url('images/overlay.png'),	url('images/highlight.png');
 		background-position:	top left,					center center;
 		background-size:		auto,						100% 250%;
