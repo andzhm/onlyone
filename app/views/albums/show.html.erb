@@ -1,24 +1,30 @@
-<h1>Albums#show</h1>
-<p>Find me in app/views/albums/show.html.erb</p>
 
-<% @photos.in_groups_of(3).each do |photos| %>
-	<% photos.select! {|x| !x.nil?} %>
-	<div>
-		<% photos.each do |photo| %>
-		<div>
-			<p><%= photo.photo_name %></p>
-			<p><%= photo.photo_description %></p>
-			
-<p><% if photo.photoimage_stored? %>
-    <%= image_tag photo.photoimage.url, height: 200 %>
-<% else %>
-    <%= image_tag 'no_image.png', height: 200 %>
-<% end %></p>
 
-		</div>
-<% end %>
 
+<!-- Header -->
+	<%= render 'shared/header' %>
+	<div id="main" class="container">
+		<section class="box features" id="gallery">
+			<% @photos.in_groups_of(3).each do |photos| %>
+			<% photos.select! {|x| !x.nil?} %>
+				<div class="row">
+						<% photos.each do |photo| %>
+							<div class="3u">
+								<section class="box feature">
+										<a href="#" class="image featured">
+											<% if photo.photoimage_stored? %>
+    											<%= image_tag photo.photoimage.url %>
+											<% else %>
+    											<%= image_tag 'no_image.png' %>
+											<% end %>
+										</a>
+								</section>		
+							</div>
+						<% end %>
+				</div>
+			<% end %>
+		</section>
 	</div>
 
-<% end %>
-
+<!-- Footer -->
+	<%= render 'shared/footer' %>

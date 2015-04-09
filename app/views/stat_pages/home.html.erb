@@ -65,24 +65,26 @@
 								<section class="box highlight" id="uslugi">
 									<h2 class="major"><span>Наши услуги</span></h2>
 									<ul class="special">
-										<li><a href="#" class="icon fa-calendar" id="usl_organization"></a><span class="label">Организация от А до Я</span></li>
-										<li><a href="#" class="icon fa-university" id="usl_ceremony"></a><span class="label">Выездная церемония</span></li>
-										<li><a href="#" class="icon fa-camera" id="usl_photo"></a><span class="label">Фотограф</span></li>
-										<li><a href="#" class="icon fa-video-camera" id="usl_video"></a><span class="label">Видеограф</span></li>
-									</ul>
-									<ul class="special">
-										<li><a href="#" class="icon fa-microphone" id="usl_lead"></a><span class="label">Ведущий праздника</span></li>
-										<li><a href="#" class="icon fa-music" id="usl_music"></a><span class="label">Музыка</span></li>
+										<li><a href="#" class="icon fa-key" id="usl_organization"></a><span class="label">Организация от А до Я</span></li>
+										<li><a href="#" class="icon fa-heart" id="usl_ceremony"></a><span class="label">Выездная церемония</span></li>
 										<li><a href="#" class="icon fa-leaf" id="usl_flower"></a><span class="label">Флористика</span></li>
-										<li><a href="#" class="icon fa-star" id="usl_show"></a><span class="label">Шоу программа</span></li>
+										<li><a href="#" class="icon fa-cutlery" id="usl_hall"></a><span class="label">Оформление зала</span></li>
 										<li><a href="#" class="icon fa-users" id="usl_coordination"></a><span class="label">Координация</span></li>
 									</ul>
 									<ul class="special">
-										
-										<li><a href="#" class="icon fa-cutlery" id="usl_hall"></a><span class="label">Оформление зала</span></li>
-										<li><a href="#" class="icon fa-coffee" id="usl_bar"></a><span class="label">Candy Bar/ Cheese Bar</span></li>
+										<li><a href="#" class="icon fa-camera" id="usl_photo"></a><span class="label">Фотограф</span></li>
+										<li><a href="#" class="icon fa-video-camera" id="usl_video"></a><span class="label">Видеограф</span></li>
+										<li><a href="#" class="icon fa-microphone" id="usl_lead"></a><span class="label">Ведущий праздника</span></li>
+										<li><a href="#" class="icon fa-music" id="usl_music"></a><span class="label">Музыка</span></li>
+										<li><a href="#" class="icon fa-star" id="usl_show"></a><span class="label">Шоу программа</span></li>
+										<li><a href="#" class="icon fa-car" id="usl_auto"></a><span class="label">Кортеж</span></li>	
+									</ul>
+									<ul class="special">
+										<li><a href="#" class="icon fa-smile-o" id="usl_photozone"></a><span class="label">Фотозона</span></li>
+										<li><a href="#" class="icon fa-birthday-cake" id="usl_bar"></a><span class="label">Candy Bar/ Cheese Bar</span></li>
+										<li><a href="#" class="icon fa-female" id="usl_style"></a><span class="label">Стиль молодоженов</span></li>
 										<li><a href="#" class="icon fa-newspaper-o" id="usl_polygraphy"></a><span class="label">Свадебная полиграфия</span></li>
-										<li><a href="#" class="icon fa-car" id="usl_auto"></a><span class="label">Автомобили</span></li>
+										
 									</ul>
 								</section>
 
@@ -96,54 +98,30 @@
 									<h2 class="major"><span>Галерея</span></h2>
 									<div>
 										<div class="row">
+											<% @albums.each do |album| %>
 											<div class="3u">
 												
 												<!-- Feature -->
-													<section class="box feature">
-														<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-														<h3><a href="#">Альбом 1</a></h3>
-														<p>
-															Свадьба там то там то
-														</p>
-													</section>
-										
-											</div>
-											<div class="3u">
 												
-												<!-- Feature -->
 													<section class="box feature">
-														<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-														<h3><a href="#">Альбом 2</a></h3>
+														<a href="#" class="image featured">
+															<% if album.image_stored? %>
+    															<%= image_tag album.image.url %>
+															<% else %>
+    															<%= image_tag 'no_image.png' %>
+															<% end %>
+														</a>
+														<h3><a href="#"><%= album.name %></a></h3>
 														<p>
-															День рождение в стиле лалала
+															<%= album.description %>
+
 														</p>
+														<p><%= link_to 'Show', album %></p>
 													</section>
-										
-											</div>
-											<div class="3u">
 												
-												<!-- Feature -->
-													<section class="box feature">
-														<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-														<h3><a href="#">Альбом 3</a></h3>
-														<p>
-															Корпоратив туц туц туц
-														</p>
-													</section>
-										
 											</div>
-											<div class="3u">
-												
-												<!-- Feature -->
-													<section class="box feature">
-														<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-														<h3><a href="#">Альбом 4</a></h3>
-														<p>
-															Каждую пятницу я.. ну вы поняли
-														</p>
-													</section>
-										
-											</div>
+											<% end %>
+											
 										</div>
 										<div class="row">
 											<div class="12u">
@@ -253,49 +231,7 @@
 			</div>
 
 		<!-- Footer -->
-			<footer id="footer" class="container">
-				<div class="row 200%">
-					<div class="12u">
-
-						<!-- About -->
-							<section id="contacts">
-								<h2 class="major"><span>Контакты</span></h2>
-								<p>
-									Контакты и форма обратной связи
-									Контакты и форма обратной связи
-									Контакты и форма обратной связи
-									Контакты и форма обратной связи
-								</p>
-							</section>
-
-					</div>
-				</div>
-				<div class="row 200%">
-					<div class="12u">
-
-						<!-- Contact -->
-							<section>
-								<h2 class="major"><span>Мы в социальных сетях</span></h2>
-								<ul class="contact">
-									<li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a></li>
-									<li><a class="icon fa-twitter" href="#"><span class="label">Twitter</span></a></li>
-									<li><a class="icon fa-instagram" href="#"><span class="label">Instagram</span></a></li>
-									<li><a class="icon fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
-									<li><a class="icon fa-google-plus" href="#"><span class="label">Google+</span></a></li>
-								</ul>
-							</section>
-					
-					</div>
-				</div>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul class="menu">
-							<li>&copy; Untitled. All rights reserved</li>
-						</ul>
-					</div>
-
-			</footer>
+		<%= render 'shared/footer' %>
 
 	</body>
 </html>

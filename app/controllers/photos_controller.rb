@@ -7,40 +7,40 @@ class PhotosController < ApplicationController
     @photo = Photo.find(params[:id])
   end
 
-  def new
-    @photo = Photo.new
-  end
+  #def new
+  #  @photo = Photo.new
+  #end
 
-  def create
-    @photo = Photo.new(photo_params)
-    if @photo.save
-      redirect_to(:action => 'index')
-    else
-      render("new")
-    end
-  end
+  #def create
+  #  @photo = Photo.new(photo_params)
+  # if @photo.save
+  #    redirect_to(:action => 'index')
+  #  else
+  #    render("new")
+  #  end
+  #end
 
-  def edit
-    @photo = Photo.find(params[:id])
-  end
+  #def edit
+  #  @photo = Photo.find(params[:id])
+  #end
 
-  def update
-    @photo = Photo.find(params[:id])
-    if @photo.update_attributes(photo_params)
-      redirect_to(:action => 'show', :id => @photo.id)
-    else
-      render('index')
-    end
-  end
+  #def update
+  #  @photo = Photo.find(params[:id])
+  #  if @photo.update_attributes(photo_params)
+  #    redirect_to(:action => 'show', :id => @photo.id)
+  #  else
+  #    render('index')
+  #  end
+  #end
 
-  def delete
-    @photo = Photo.find(params[:id])
-  end
+  #def delete
+  #  @photo = Photo.find(params[:id])
+  #end
 
-  def destroy
-    Photo.find(params[:id]).destroy
-    redirect_to(:action => 'index')
-  end
+  #def destroy
+  #  Photo.find(params[:id]).destroy
+  #  redirect_to(:action => 'index')
+  #end
 
   private
 
