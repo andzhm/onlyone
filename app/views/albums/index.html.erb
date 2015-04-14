@@ -1,20 +1,30 @@
-<h1>Albums#index</h1>
-<p>Список всех альбомов здесь!</p>
+<!-- Header -->
+	<%= render 'shared/header' %>
 
-
-
-<div>
-<% @albums.each do |album| %>
-
-  <p><%= album.name %></p>
-  <p><%= album.description %></p>
-
-<p><% if album.image_stored? %>
-    <%= image_tag album.image.url, height: 200 %>
-<% else %>
-    <%= image_tag 'no_image.png', height: 200 %>
-<% end %></p>
-<p><%= link_to 'Show', album %></p>
-
-<% end %>
+<div id="main-wrapper">
+	<div id="main" class="container">
+		<section class="box features" id="gallery">
+			<div class="row">
+				<% @albums.each do |album| %>
+					<div class="3u">
+						<section class="box feature">
+							<a href="#" class="image featured">
+								<% if album.image_stored? %>
+    								<%= image_tag album.image.url %>
+								<% else %>
+    								<%= image_tag 'no_image.png' %>
+								<% end %>
+									<p><%= album.name %></p>
+  									<p><%= album.description %></p>
+									<p><%= link_to 'Show', album %></p>
+							</a>
+						</section>
+					</div>
+				<% end %>
+			</div>
+		</section>
+	</div>
 </div>
+
+<!-- Footer -->
+	<%= render 'shared/footer' %>

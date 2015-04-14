@@ -28,7 +28,7 @@
 				<ul>
 					<li><a href="#">OnlyOne</a></li>
 					<li><a href="#o_nas">О нас</a></li>
-					<li><a href="#uslugi">Наши услуги</a></li>
+					<li><a href="#services">Наши услуги</a></li>
 					<li><a href="#gallery">Галерея</a></li>
 					<li><a href="#news">Статьи</a></li>
 					<li><a href="#contacts">Контакты</a></li>
@@ -62,28 +62,28 @@
 										Мы такие и такие и такие....
 									</p>
 								</section>
-								<section class="box highlight" id="uslugi">
+								<section class="box highlight" id="services">
 									<h2 class="major"><span>Наши услуги</span></h2>
 									<ul class="special">
-										<li><a href="#" class="icon fa-key" id="usl_organization"></a><span class="label">Организация от А до Я</span></li>
-										<li><a href="#" class="icon fa-heart" id="usl_ceremony"></a><span class="label">Выездная церемония</span></li>
-										<li><a href="#" class="icon fa-leaf" id="usl_flower"></a><span class="label">Флористика</span></li>
-										<li><a href="#" class="icon fa-cutlery" id="usl_hall"></a><span class="label">Оформление зала</span></li>
-										<li><a href="#" class="icon fa-users" id="usl_coordination"></a><span class="label">Координация</span></li>
+										<li><a href="services/organization" class="icon fa-key" id="usl_organization"></a><span class="label">Организация от А до Я</span></li>
+										<li><a href="services/ceremony" class="icon fa-heart" id="usl_ceremony"></a><span class="label">Выездная церемония</span></li>
+										<li><a href="services/floristics" class="icon fa-leaf" id="usl_flower"></a><span class="label">Флористика</span></li>
+										<li><a href="services/hall_decoration" class="icon fa-cutlery" id="usl_hall"></a><span class="label">Оформление зала</span></li>
+										<li><a href="services/coordination" class="icon fa-users" id="usl_coordination"></a><span class="label">Координация</span></li>
 									</ul>
 									<ul class="special">
-										<li><a href="#" class="icon fa-camera" id="usl_photo"></a><span class="label">Фотограф</span></li>
-										<li><a href="#" class="icon fa-video-camera" id="usl_video"></a><span class="label">Видеограф</span></li>
-										<li><a href="#" class="icon fa-microphone" id="usl_lead"></a><span class="label">Ведущий праздника</span></li>
-										<li><a href="#" class="icon fa-music" id="usl_music"></a><span class="label">Музыка</span></li>
-										<li><a href="#" class="icon fa-star" id="usl_show"></a><span class="label">Шоу программа</span></li>
-										<li><a href="#" class="icon fa-car" id="usl_auto"></a><span class="label">Кортеж</span></li>	
+										<li><a href="services/photographer" class="icon fa-camera" id="usl_photo"></a><span class="label">Фотограф</span></li>
+										<li><a href="services/videographer" class="icon fa-video-camera" id="usl_video"></a><span class="label">Видеограф</span></li>
+										<li><a href="services/leading" class="icon fa-microphone" id="usl_lead"></a><span class="label">Ведущий праздника</span></li>
+										<li><a href="services/music" class="icon fa-music" id="usl_music"></a><span class="label">Музыка</span></li>
+										<li><a href="services/show_program" class="icon fa-star" id="usl_show"></a><span class="label">Шоу программа</span></li>
+										<li><a href="services/cortege" class="icon fa-car" id="usl_auto"></a><span class="label">Кортеж</span></li>	
 									</ul>
 									<ul class="special">
-										<li><a href="#" class="icon fa-smile-o" id="usl_photozone"></a><span class="label">Фотозона</span></li>
-										<li><a href="#" class="icon fa-birthday-cake" id="usl_bar"></a><span class="label">Candy Bar/ Cheese Bar</span></li>
-										<li><a href="#" class="icon fa-female" id="usl_style"></a><span class="label">Стиль молодоженов</span></li>
-										<li><a href="#" class="icon fa-newspaper-o" id="usl_polygraphy"></a><span class="label">Свадебная полиграфия</span></li>
+										<li><a href="services/photozone" class="icon fa-smile-o" id="usl_photozone"></a><span class="label">Фотозона</span></li>
+										<li><a href="services/candy_bar" class="icon fa-birthday-cake" id="usl_bar"></a><span class="label">Candy Bar/ Cheese Bar</span></li>
+										<li><a href="services/style" class="icon fa-female" id="usl_style"></a><span class="label">Стиль молодоженов</span></li>
+										<li><a href="services/wedding_printing" class="icon fa-newspaper-o" id="usl_polygraphy"></a><span class="label">Свадебная полиграфия</span></li>
 										
 									</ul>
 								</section>
@@ -99,7 +99,7 @@
 									<div>
 										<div class="row">
 											<% @albums.each do |album| %>
-											<div class="3u">
+												<div class="3u">
 												
 												<!-- Feature -->
 												
@@ -126,7 +126,7 @@
 										<div class="row">
 											<div class="12u">
 												<ul class="actions">
-													<li><a href="#" class="button big">Посмотреть все альбомы</a></li>
+													<li><a href="/albums" class="button big">Посмотреть все альбомы</a></li>
 													<!--<li><a href="#" class="button alt big">Think About It</a></li>-->
 												</ul>
 											</div>

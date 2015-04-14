@@ -1,8 +1,8 @@
 
-
-
 <!-- Header -->
 	<%= render 'shared/header' %>
+
+<div id="main-wrapper">
 	<div id="main" class="container">
 		<section class="box features" id="gallery">
 			<% @photos.in_groups_of(3).each do |photos| %>
@@ -25,6 +25,7 @@
 			<% end %>
 		</section>
 	</div>
+</div>
 
 <!-- Footer -->
 	<%= render 'shared/footer' %>

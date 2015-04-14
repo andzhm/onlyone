@@ -1,7 +1,7 @@
 class StatPagesController < ApplicationController
 
 	def home
-		@albums = Album.all
+		@albums = Album.all.limit(4).reverse
 	end
 	
 	def signup
