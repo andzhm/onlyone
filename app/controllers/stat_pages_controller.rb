@@ -1,8 +1,8 @@
 class StatPagesController < ApplicationController
 
 	def home
-		@albums = Album.all.limit(4).reverse
-    @news   = Novelty.all.limit(4).reverse
+		@albums         = Album.order(created_at: :desc).limit(4)
+    @latest_news    = Novelty.order(created_at: :desc).limit(5)
 	end
 	
 	def signup

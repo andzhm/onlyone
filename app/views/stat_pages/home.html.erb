@@ -30,7 +30,7 @@
 					<li><a href="#o_nas">О нас</a></li>
 					<li><a href="#services">Наши услуги</a></li>
 					<li><a href="#gallery">Галерея</a></li>
-					<li><a href="#news">Статьи</a></li>
+					<li><a href="#news">Новости</a></li>
 					<li><a href="#contacts">Контакты</a></li>
 				</ul>
 			</nav>
@@ -141,35 +141,21 @@
 
 							<!-- Blog -->
 								<section class="box blog" id="news">
-									<h2 class="major"><span>Статьи</span></h2>
+									<h2 class="major"><span>Новости</span></h2>
 									<div>
 										<div class="row">
 											<div class="9u">
 												<div class="content content-left">
 												
 													<!-- Featured Post -->
-														<article class="box post">
-															<header>
-																<h3><a href="#">Главная новость</a></h3>
-																<p>Открытие сайта</p>
-																<ul class="meta">
-																	<li class="icon fa-clock-o">15 minutes ago</li>
-																	<li class="icon fa-comments"><a href="#">8</a></li>
-																</ul>
-															</header>
-															<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-															<p>
-																Спешим вас обрадовать запуском сайта нашего ивент-агентсва.... Спешим вас обрадовать запуском сайта нашего ивент-агентсва.... Спешим вас обрадовать запуском сайта нашего ивент-агентсва.... Спешим вас обрадовать запуском сайта нашего ивент-агентсва....
-															</p>
-															<a href="#" class="button">Читать далее</a>
-														</article>
+													<%= render 'news/featured', novelty: @latest_news.first %>
 												
 												</div>
 											</div>
 											<div class="3u">
 												<div class="sidebar">
 													<!-- News -->
-													<%= render 'news/preview' %>
+													<%= render 'news/latest', news: @latest_news[1..-1] %>
 												</div>
 											</div>
 										</div>
