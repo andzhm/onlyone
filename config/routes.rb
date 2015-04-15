@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   
   root 'stat_pages#home'
 
+  resources :news
+
   resources :albums
   get 'albums/:id/delete' => 'albums#delete', :as => :albums_delete
 

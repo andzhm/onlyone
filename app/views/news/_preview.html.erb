@@ -1,0 +1,17 @@
+<ul class="divided">
+  <% @news.each do |novelty| %>
+    <li>
+      <article class="box post-summary">
+        <h3><a href="#"><%= novelty.title %></a></h3>
+        <p>
+          <%= novelty.description.split[0..7].join(' ') %>...
+        </p>
+        <ul class="meta">
+          <li class="icon fa-clock-o"><%= time_ago_in_words(novelty.created_at) %></li>
+          <li class="icon fa-comments"><a href="#">27</a></li>
+        </ul>
+      </article>
+    </li>
+  <% end %>
+</ul>
+<a href="#" class="button alt">Посмотреть все</a>
