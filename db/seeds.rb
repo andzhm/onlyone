@@ -6,6 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+# News
+25.times do |n|
+  Novelty.create(title: Faker::Lorem.sentence, description: Faker::Lorem.paragraph(40))
+end
+
 admin_main = Admin.create(email: 'name@name.com', password: '123456789', password_confirmation: '123456789')
 
 

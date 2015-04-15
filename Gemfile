@@ -8,6 +8,7 @@ group :development do
   gem 'sqlite3'
 end
 
+gem 'faker',     '1.4.3'
 #add images from cpmputer
 gem 'dragonfly', "~>1.0.7"
 # Use SCSS for stylesheets
