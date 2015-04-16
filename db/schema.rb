@@ -56,4 +56,13 @@ ActiveRecord::Schema.define(version: 20150416220331) do
     t.datetime "updated_at"
   end
 
+  create_table "services", force: true do |t|
+    t.string   "title"
+    t.text     "info"
+    t.string   "icon"
+    t.string   "image_uid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end

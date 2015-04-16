@@ -1,0 +1,17 @@
+/ Nav
+%nav#nav.skel-layers-fixed
+  %ul
+    %li= link_to 'OnlyOne', '#'
+    %li= link_to 'О нас', root_path(anchor: 'about_us')
+    %li= link_to 'Наши услуги', root_path(anchor: 'services')
+    %li= link_to 'Галерея', '#'
+    %li= link_to 'Новости', '#'
+    %li= link_to 'Контакты', '#'
+/ Banner
+#banner-wrapper
+  %section#banner
+    / <h2>OnlyOne logo</h2>
+    %p
+      %img{:src => "/images/logo.png"}/
+    %p Ивент агенство Ивент агентсво ивент агенство
+    = link_to 'Связаться с нами', '#', class: 'button'

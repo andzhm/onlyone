@@ -1,21 +1,6 @@
 Rails.application.routes.draw do
 
-  #Services static pages
-  get 'services/organization'
-  get 'services/ceremony'
-  get 'services/floristics'
-  get 'services/hall_decoration'
-  get 'services/coordination'
-  get 'services/photographer'
-  get 'services/videographer'
-  get 'services/leading'
-  get 'services/music'
-  get 'services/show_program'
-  get 'services/cortege'
-  get 'services/photozone'
-  get 'services/candy_bar'
-  get 'services/style'
-  get 'services/wedding_printing'
+  resources 'services'
 
   match '/admins/sign_up', to: 'stat_pages#signup', via: 'get'
 

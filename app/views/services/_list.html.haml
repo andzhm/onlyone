@@ -1,0 +1,9 @@
+%ul.special
+  -@services.each do |srv|
+    %li
+      =link_to '', service_path(srv.id), class: "icon #{srv.icon}", id: "image"
+      %span.label= srv.title
+      :javascript
+        $("#image").css({"hover" { "background-image: url(#{srv.image.url})");
+      
+  
