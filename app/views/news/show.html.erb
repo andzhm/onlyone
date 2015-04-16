@@ -1,4 +1,9 @@
 <h3>
   <%= @novelty.title %>
 </h3>
+
+<%= image_tag @novelty.image.url if @novelty.image_stored? %>
+
+<p>
 <%= @novelty.description %>
+</p>

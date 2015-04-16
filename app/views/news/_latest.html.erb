@@ -2,7 +2,7 @@
   <% news.each do |novelty| %>
     <li>
       <article class="box post-summary">
-        <h3><a href="#"><%= novelty.title %></a></h3>
+        <h3><%= link_to novelty.title, news_path(novelty) %></h3>
         <p>
           <%= novelty.description.split[0..7].join(' ') %>...
         </p>
