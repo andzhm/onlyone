@@ -3,6 +3,7 @@
     <li>
       <article class="box post-summary">
         <h3><a href="#"><%= novelty.title %></a></h3>
+        <%= (image_tag novelty.image.url, size: "100x100", alt: novelty.title) if novelty.image_stored? %>
         <p>
           <%= novelty.description.split[0..32].join(' ') %>...
         </p>
