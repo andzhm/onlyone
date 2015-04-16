@@ -106,9 +106,9 @@
 													<section class="box feature">
 														<a href="#" class="image featured">
 															<% if album.image_stored? %>
-    															<%= image_tag album.image.url %>
+																<%= image_tag album.image.url %>	
 															<% else %>
-    															<%= image_tag 'no_image.png' %>
+    														<%= image_tag 'no-image.png' %>
 															<% end %>
 														</a>
 														<h3><a href="#"><%= album.name %></a></h3>
