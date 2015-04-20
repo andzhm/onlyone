@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-ruby '2.1.5'
+ruby '2.2.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
@@ -8,9 +8,11 @@ group :development do
   gem 'sqlite3'
 end
 
+# seeds fakes generator
 gem 'faker',     '1.4.3'
-#add images from cpmputer
+# add images from computer
 gem 'dragonfly', "~>1.0.7"
+gem 'dragonfly-s3_data_store'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
