@@ -57,17 +57,22 @@
 								<section class="box feature">
 									<a href="#" class="image featured">
 										<% if album.image_stored? %>
-											<%= image_tag album.image.url %>	
+											<%= link_to album do %>
+												<%= image_tag album.image.url, :class => 'image featured' %>
+											<% end %>	
 										<% else %>
 											<%= image_tag 'no-image.png' %>
 										<% end %>
 									</a>
-									<h3><a href="#"><%= album.name %></a></h3>
+									<h3><%= link_to album do %>
+											<%= album.name %>
+										<% end %>
+									</h3>
 									<p>
 										<%= album.description %>
 
 									</p>
-									<p><%= link_to 'Show', album %></p>
+									
 								</section>
 							
 						</div>
