@@ -1,8 +1,6 @@
-<!-- Header -->
-	<%= render 'shared/header' %>
 
-<div id="main-wrapper">
-	<div id="main" class="container">
+
+
 		<section class="box features" id="gallery">
 			<div class="row">
 				<% @albums.each do |album| %>
@@ -16,15 +14,11 @@
 								<% end %>
 									<p><%= album.name %></p>
   									<p><%= album.description %></p>
-									<p><%= link_to 'Show', album %></p>
+									
 							</a>
 						</section>
 					</div>
 				<% end %>
 			</div>
 		</section>
-	</div>
-</div>
-
-<!-- Footer -->
-	<%= render 'shared/footer' %>
+	

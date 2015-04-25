@@ -14,10 +14,10 @@ admin_main = Admin.create(email: 'name@name.com', password: '123456789', passwor
 end
 
 # Albums
-10.times do |n|
-  album = Album.create(name: "Album-#{n+1}", description: Faker::Lorem.sentence, image: Pathname.new('app/assets/images/no-image.png'))
+2.times do |n|
+  album = Album.create(name: "Album-#{n+1}", description: Faker::Lorem.sentence, image: Rails.root + "app/assets/images/no-image.png")
   # Photos
   5.times do |j|
-    Photo.create(photo_name: "Photo-#{j+1}", photo_description: Faker::Lorem.sentence, photoimage: Pathname.new("app/assets/images/pic0#{1+rand(6)}.jpg"), album_id: album.id)
+    Photo.create(photo_name: "Photo-#{j+1}", photo_description: Faker::Lorem.sentence, photoimage: Rails.root + "app/assets/images/pic0#{1+rand(6)}.jpg", album_id: album.id)
   end
 end

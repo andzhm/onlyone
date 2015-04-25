@@ -11,22 +11,12 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-  <body class="homepage">
-
-    <!-- Nav -->
-    <nav id="nav" class="skel-layers-fixed">
-      <ul>
-        <li><%= link_to "OnlyOne", root_path %></li>
-        <li><a href="#about_us">О нас</a></li>
-        <li><a href="#services">Наши услуги</a></li>
-        <li><a href="#gallery">Галерея</a></li>
-        <li><%= link_to "Новости", news_index_path %></li>
-        <li><a href="#contacts">Контакты</a></li>
-      </ul>
-    </nav>
-
-    <!-- Banner -->
+  <body class="homepage">    
+    <% if current_page?(controller: 'stat_pages', action: 'home') %>
+    <%= render 'shared/main_header' %>
+    <% else %>
     <%= render 'shared/header' %>
+    <% end %>
 
     <!-- Main -->
     <div id="main-wrapper">
