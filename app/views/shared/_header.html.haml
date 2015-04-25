@@ -1,0 +1,9 @@
+/ Nav
+%nav#nav.skel-layers-fixed
+  %ul
+    %li= link_to 'OnlyOne', root_path
+    %li= link_to 'О нас', root_path(anchor: 'about_us')
+    %li= link_to 'Наши услуги', root_path(anchor: 'services')
+    %li= link_to 'Галерея', root_path(anchor: 'gallery')
+    %li= link_to 'Новости', news_index_path
+    %li= link_to 'Контакты', root_path(anchor: 'contacts')

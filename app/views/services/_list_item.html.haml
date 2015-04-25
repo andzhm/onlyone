@@ -1,0 +1,12 @@
+%ul.special
+  - services.each do |srv|
+    %li
+      =link_to '', service_path(srv.id), class: "icon #{srv.icon}", id: "image-#{srv.id}"
+      %span.label= srv.title
+      :javascript
+        $('#image-#{srv.id}').mouseenter(function(){
+          $('#image-#{srv.id}').css({'background-image':'url(#{srv.image.url})'});
+        });
+        $('#image-#{srv.id}').mouseleave(function(){
+          $('#image-#{srv.id}').css({'background-image':''});
+        });

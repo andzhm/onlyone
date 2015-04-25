@@ -1,9 +1,8 @@
 
 <div class="row 200%">
 	<div class="12u">
-		
 		<!-- Highlight -->
-			<section class="box highlight" id="o_nas">
+			<section class="box highlight" id="about_us">
 				<h2 class="major"><span>О нас</span></h2>
 				
 				<p>
@@ -16,26 +15,8 @@
 			<section class="box highlight" id="services">
 				<h2 class="major"><span>Наши услуги</span></h2>
 				<ul class="special">
-					<li><a href="services/organization" class="icon fa-key" id="usl_organization"></a><span class="label">Организация от А до Я</span></li>
-					<li><a href="services/ceremony" class="icon fa-heart" id="usl_ceremony"></a><span class="label">Выездная церемония</span></li>
-					<li><a href="services/floristics" class="icon fa-leaf" id="usl_flower"></a><span class="label">Флористика</span></li>
-					<li><a href="services/hall_decoration" class="icon fa-cutlery" id="usl_hall"></a><span class="label">Оформление зала</span></li>
-					<li><a href="services/coordination" class="icon fa-users" id="usl_coordination"></a><span class="label">Координация</span></li>
-				</ul>
-				<ul class="special">
-					<li><a href="services/photographer" class="icon fa-camera" id="usl_photo"></a><span class="label">Фотограф</span></li>
-					<li><a href="services/videographer" class="icon fa-video-camera" id="usl_video"></a><span class="label">Видеограф</span></li>
-					<li><a href="services/leading" class="icon fa-microphone" id="usl_lead"></a><span class="label">Ведущий праздника</span></li>
-					<li><a href="services/music" class="icon fa-music" id="usl_music"></a><span class="label">Музыка</span></li>
-					<li><a href="services/show_program" class="icon fa-star" id="usl_show"></a><span class="label">Шоу программа</span></li>
-					<li><a href="services/cortege" class="icon fa-car" id="usl_auto"></a><span class="label">Кортеж</span></li>	
-				</ul>
-				<ul class="special">
-					<li><a href="services/photozone" class="icon fa-smile-o" id="usl_photozone"></a><span class="label">Фотозона</span></li>
-					<li><a href="services/candy_bar" class="icon fa-birthday-cake" id="usl_bar"></a><span class="label">Candy Bar/ Cheese Bar</span></li>
-					<li><a href="services/style" class="icon fa-female" id="usl_style"></a><span class="label">Стиль молодоженов</span></li>
-					<li><a href="services/wedding_printing" class="icon fa-newspaper-o" id="usl_polygraphy"></a><span class="label">Свадебная полиграфия</span></li>
-					
+						<%= render 'services/list'%>
+					</section>
 				</ul>
 			</section>
 
@@ -70,12 +51,11 @@
 									</h3>
 									<p>
 										<%= album.description %>
-
 									</p>
 									
 								</section>
-							
-						</div>
+
+							</div>
 						<% end %>
 						
 					</div>

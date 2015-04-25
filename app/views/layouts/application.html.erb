@@ -11,10 +11,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-  <body class="homepage">
-    
+  <body class="homepage">    
     <% if current_page?(controller: 'stat_pages', action: 'home') %>
-    <%= render 'shared/mainheader' %>
+    <%= render 'shared/main_header' %>
     <% else %>
     <%= render 'shared/header' %>
     <% end %>

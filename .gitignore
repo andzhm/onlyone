@@ -17,4 +17,4 @@
 
 /public/system/dragonfly
 
-/db/schema.rb
+.DS_Store
