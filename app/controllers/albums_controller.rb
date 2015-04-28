@@ -50,3 +50,7 @@ class AlbumsController < ApplicationController
     params.require(:album).permit(:name, :description, :image)
   end
 end
+
+
+
+
