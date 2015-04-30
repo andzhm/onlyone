@@ -12,10 +12,11 @@
     <%= csrf_meta_tags %>
   </head>
   <body class="homepage">    
-    <% if #current_page?(controller: 'stat_pages', action: 'home') %>
-    <%= render 'shared/main_header' %>
+    
+    <% if current_page?(root_path) %>
+      <%= render 'shared/main_header' %>
     <% else %>
-    <%= render 'shared/header' %>
+      <%= render 'shared/header' %>
     <% end %>
 
     <!-- Main -->

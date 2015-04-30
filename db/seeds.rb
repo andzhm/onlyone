@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 admin_main = Admin.create(email: 'name@name.com', password: '123456789', password_confirmation: '123456789')
-admin_test = Admin.create(email: 'name@test.com', password: '987654321', password_confirmation: '987654321')
+
 
 # News
 25.times do |n|

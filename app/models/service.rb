@@ -1,7 +1,7 @@
 class Service < ActiveRecord::Base
   dragonfly_accessor :image
 
-  validates :title, presence: true, length: {minimum: 2, maximum: 20}
+  validates :title, presence: true, length: {minimum: 2, maximum: 30}
   validates :image, presence: true
   validates :info,  presence: true
  
