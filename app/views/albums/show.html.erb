@@ -1,19 +1,21 @@
 
 
 		<section class="box features" id="gallery">
-			<% @photos.in_groups_of(3).each do |photos| %>
+			<% @photos.in_groups_of(4).each do |photos| %>
 			<% photos.select! {|x| !x.nil?} %>
 				<div class="row">
 						<% photos.each do |photo| %>
 							<div class="3u">
 								<section class="box feature">
-										<a href="#" class="image featured">
+										
 											<% if photo.photoimage_stored? %>
-    											<%= image_tag photo.photoimage.url %>
+    											<%= link_to image_tag(photo.photoimage.url), 
+    											photo.photoimage.remote_url, 
+    											class: 'image featured', rel: 'gallery', title: photo.photo_name, alt: 'Photo' %>
 											<% else %>
     											<%= image_tag 'no_image.png' %>
 											<% end %>
-										</a>
+										
 								</section>		
 							</div>
 						<% end %>

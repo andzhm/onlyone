@@ -9,13 +9,15 @@ Rails.application.routes.draw do
   
   root 'stat_pages#home'
 
+  get '/contacts' => 'stat_pages#contacts'
+
   resources :news
 
   resources :albums
-  get 'albums/:id/delete' => 'albums#delete', :as => :albums_delete
+  #get 'albums/:id/delete' => 'albums#delete', :as => :albums_delete
 
   resources :photos
-  get 'photos/:id/delete' => 'photos#delete', :as => :photos_delete
+  #get 'photos/:id/delete' => 'photos#delete', :as => :photos_delete
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

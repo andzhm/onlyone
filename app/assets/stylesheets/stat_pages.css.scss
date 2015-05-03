@@ -404,17 +404,13 @@
 				transition: top .15s ease-in-out;
 			}
 
-				ul.special li:hover
+				ul.special li a:hover
 				{
 					top: -10px;
 					text-indent: - 9999px;
 				}
 
-					ul.special li:hover a
-					{
-						/*background: #b9d2ce;*/
-
-					}
+					
 
 				ul.special a
 				{
@@ -509,51 +505,7 @@
 				}
 
 
-	#usl_organization:hover {
-		background-image: url(/images/services/organization.jpg);
-	}
-	#usl_ceremony:hover {
-		background-image: url(/images/services/ceremony.jpg);
-	}
-	#usl_photo:hover {
-		background-image: url(/images/services/photo.jpg);
-	}
-	#usl_video:hover {
-		background-image: url(/images/services/video.jpg);
-	}
-	#usl_style:hover {
-		background-image: url(/images/services/style.jpg);
-	}
-	#usl_photozone:hover {
-		background-image: url(/images/services/photozone.jpg);
-	}
-	#usl_lead:hover {
-		background-image: url(/images/services/lead.jpg);
-	}
-	#usl_music:hover {
-		background-image: url(/images/services/music.jpg);
-	}
-	#usl_flower:hover {
-		background-image: url(/images/services/flower.jpg);
-	}
-	#usl_show:hover {
-		background-image: url(/images/services/show.jpg);
-	}
-	#usl_coordination:hover {
-		background-image: url(/images/services/coordination.jpg);
-	}
-	#usl_hall:hover {
-		background-image: url(/images/services/zal.jpg);
-	}
-	#usl_bar:hover {
-		background-image: url(/images/services/cakebar.jpg);
-	}
-	#usl_polygraphy:hover {
-		background-image: url(/images/services/polygraphy.jpg);
-	}
-	#usl_auto:hover {
-		background-image: url(/images/services/auto.jpg);
-	}
+	
 
 	/* Forms */
 

@@ -5,6 +5,10 @@ class StatPagesController < ApplicationController
     	@latest_news    = Novelty.order(created_at: :desc).limit(5)
     	@services       = Service.all.to_a
 	end
+
+	def contacts
+		
+	end
 	
 	def signup
 		redirect_to '/404'
