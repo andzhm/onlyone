@@ -9,9 +9,9 @@
 								<section class="box feature">
 										
 											<% if photo.photoimage_stored? %>
-    											<%= link_to image_tag(photo.photoimage.url), 
-    											photo.photoimage.remote_url, 
-    											class: 'image featured', rel: 'gallery', title: photo.photo_name, alt: 'Photo' %>
+    											<%= link_to photo.photoimage.remote_url, class: 'fancybox', rel: 'gallery', title: photo.photo_name do %> 
+    												<%=	image_tag photo.photoimage.url, :class => 'image featured', alt: 'Photo' %>
+    											<% end %>
 											<% else %>
     											<%= image_tag 'no_image.png' %>
 											<% end %>
