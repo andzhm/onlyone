@@ -16,6 +16,12 @@
 //= require_tree .
 //= require fancybox
 
+
+//fancybox
 $(document).ready(function() {
-	$(".fancybox").fancybox();
+	$(".fancybox").fancybox({ 
+    	parent: 'body',
+    	openEffect	: 'none',
+		closeEffect	: 'none'
+   });
 });
