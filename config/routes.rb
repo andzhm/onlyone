@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   
   root 'stat_pages#home'
 
-  get '/contacts' => 'stat_pages#contacts'
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
 
   resources :news
 

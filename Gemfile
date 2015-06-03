@@ -26,6 +26,11 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'fancybox2-rails', '~> 0.2.8'
 gem 'haml-rails', "~> 0.9"
+
+# contact_us form
+gem 'mail_form'
+gem 'simple_form'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

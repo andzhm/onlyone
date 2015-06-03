@@ -6,10 +6,6 @@ class StatPagesController < ApplicationController
     	@services       = Service.all.to_a
 	end
 
-	def contacts
-		
-	end
-	
 	def signup
 		redirect_to '/404'
 	end
