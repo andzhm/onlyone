@@ -27,6 +27,9 @@ gem 'jquery-rails'
 gem 'fancybox2-rails', '~> 0.2.8'
 gem 'haml-rails', "~> 0.9"
 
+#gem for textarea redactor
+gem 'tinymce-rails', :git => 'git://github.com/spohlenz/tinymce-rails.git'
+
 # contact_us form
 gem 'mail_form'
 gem 'simple_form'

@@ -17,6 +17,7 @@
 //= require fancybox
 
 
+
 //fancybox
 $(document).ready(function() {
 	$(".fancybox").fancybox({ 
