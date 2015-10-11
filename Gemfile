@@ -28,7 +28,7 @@ gem 'fancybox2-rails', '~> 0.2.8'
 gem 'haml-rails', "~> 0.9"
 
 #gem for textarea redactor
-gem 'tinymce-rails', :git => 'git://github.com/spohlenz/tinymce-rails.git'
+#gem 'tinymce-rails', :git => 'git://github.com/spohlenz/tinymce-rails.git'
 
 # contact_us form
 gem 'mail_form'
@@ -43,6 +43,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'devise', '~> 3.4.1'
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
