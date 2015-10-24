@@ -1,14 +1,15 @@
 <article class="box post">
   <header>
-    <h3><a href="#">Последняя новость</a></h3>
-    <p><%= novelty.title %></p>
+    <h3><%= link_to novelty.title, news_path(novelty) %></h3>
+    <p><%= novelty.description.split[0..34].join(' ') %>...</p>
     <ul class="meta">
-      <li class="icon fa-clock-o">15 minutes ago</li>
+      <li class="icon fa-clock-o"><%= time_ago_in_words(novelty.created_at) %></li>
     </ul>
   </header>
-  <a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-  <p>
-    <%= novelty.description.split[0..34].join(' ') %>...
-  </p>
-  <a href="#" class="button">Читать далее</a>
+    <div>
+      <%= link_to news_path(novelty) do %>
+        <%= (image_tag novelty.image.url, :class => "news_image_mainp", alt: novelty.title) if novelty.image_stored? %></a>
+      <% end %>
+    </div>
+  <%= button_to "Читать далее", news_path(novelty), :class => "button", :method => :get  %>
 </article>

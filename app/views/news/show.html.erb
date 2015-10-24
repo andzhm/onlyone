@@ -1,9 +1,11 @@
-<h3>
-  <%= @novelty.title %>
-</h3>
+<div class="news_content">
+	<h3>
+  		<%= @novelty.title %>
+	</h3>
 
-<%= image_tag @novelty.image.url if @novelty.image_stored? %>
+	<%= image_tag @novelty.image.url, :class => "news_image" if @novelty.image_stored? %>
 
-<p>
-<%= @novelty.description %>
-</p>
+	<p>
+		<%= @novelty.description %>
+	</p>
+</div>

@@ -1,3 +1,27 @@
 // Place all the styles related to the News controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.news_content {
+	min-height: 400px;
+}
+
+.news_image {
+
+	max-width: 450px;
+	float: left;
+	margin: 0 15px 0 0;
+}
+
+.news_image_mainp {
+
+	max-width: 850px;
+}
+
+.news_image_mini {
+
+	float: left;
+    margin: -3px 20px 0 0;
+    max-width: 200px;
+    padding: 0 10px 0 0;
+}	

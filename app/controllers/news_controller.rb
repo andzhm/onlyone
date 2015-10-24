@@ -1,7 +1,7 @@
 class NewsController < ApplicationController
 
   def index
-    @news = Novelty.all
+    @news = Novelty.all.reverse
   end
 
   def show
